@@ -1,6 +1,6 @@
 # Parallel Patterns in Computing
 
-## Introduction  
+## Introduction 
 Parallel patterns in computing are common ways to break down tasks so that multiple things can happen at the same time.
 Instead of doing everything one by one, computers can split up the work and finish it faster.
 There are different types of parallel patterns, like **task parallelism**, where different tasks run independently, and **data parallelism**, where the same task happens to different pieces of data at the same time. 
