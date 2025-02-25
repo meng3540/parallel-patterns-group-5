@@ -49,9 +49,6 @@ Example:
 Let’s say our kernel looks like this:  
 ![image](https://github.com/user-attachments/assets/8f8e5aeb-8503-44db-892e-ba7c0a0694e4)
 
-[ 0 1 0 ]
-[ 1 -4 1 ]
-[ 0 1 0 ]
 
 If this kernel is placed over a section of the image, each pixel in that section gets **multiplied** by the corresponding number in the kernel.  
 
