@@ -15,11 +15,7 @@ CPUs are great for handling small, complex tasks, while GPUs are built for crunc
 When they work together, big problems can be solved much faster, like real-time video processing, weather predictions, or training deep learning models.
 This teamwork helps computers run heavy tasks more efficiently and saves time.
 
-We as group number 5 are working on 2D Convolution: 
-
-
-
-# Parallel Computation Pattern: 2D Convolution
+# We as group number 5 are working on Parallel Computation Pattern: 2D Convolution:
 
 ## Overview & Applications  
 2D Convolution is a core computational pattern widely used in **image processing, computer vision, deep learning, and signal processing**. In this pattern, a small matrix called a **kernel (or filter)** is applied to a larger 2D data array (such as an image) to extract features, detect edges, blur, sharpen, or perform other transformations. Its applications include:  
