@@ -47,6 +47,7 @@ If the image is a **5x5 pixel grid** and the kernel is a **3x3 grid**, we will s
 
 Example:  
 Let’s say our kernel looks like this:  
+![image](https://github.com/user-attachments/assets/8f8e5aeb-8503-44db-892e-ba7c0a0694e4)
 
 [ 0 1 0 ]
 [ 1 -4 1 ]
