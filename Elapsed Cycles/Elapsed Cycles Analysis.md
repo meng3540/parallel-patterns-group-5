@@ -47,6 +47,7 @@ This metric tells us how much stress is being placed on L1 and helps evaluate ho
 
 ---
 
+
 ## ✅ Final Insight
 
 | Optimization               | L1 Cycle Impact            | What It Means                            |
