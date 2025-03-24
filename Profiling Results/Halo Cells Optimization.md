@@ -6,6 +6,7 @@ This section explains the third (and fastest) optimization using **shared memory
 
 ## ⚙️ What Changed
 
+
 ### ✅ What This Version Does:
 
 - The **filter stays in constant memory** (same as before).
