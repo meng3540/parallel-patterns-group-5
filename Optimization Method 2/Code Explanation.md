@@ -4,6 +4,7 @@ The CUDA Gaussian blur project now has **Second optimal** version. Along with *
 
 ---
 
+
 ## 📸 What It Does
 
 - Loads and converts an image to grayscale
