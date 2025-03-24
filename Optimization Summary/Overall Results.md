@@ -6,6 +6,7 @@
 | 2.           | Constant Memory with Caching         | 1.055                  | 25.115                     | 1.018        | 1.018               |
 | 3.           | Halo Cells with Shared Memory + Tiling | 0.009                  | 295.975                    | 117.222      | 119.333             |
 
+ 
 ### 📝 Notes:
 - **Step Speedup** = (Previous Execution Time) / (Current Execution Time)
 - **Cumulative Speedup** = (Initial Execution Time) / (Current Execution Time)
