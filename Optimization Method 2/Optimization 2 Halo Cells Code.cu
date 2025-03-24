@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <cuda.h>
 
+
 // Include image loading/writing libraries
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
