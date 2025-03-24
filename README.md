@@ -80,3 +80,10 @@ If this kernel is placed over a section of the image, each pixel in that section
 - **Optimizations:**  
   Techniques such as tiling, shared memory usage, and parallel reduction further enhance the performance of convolution operations on GPUs.  
 
+
+
+
+
+
+
+
