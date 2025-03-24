@@ -4,6 +4,7 @@ This section summarizes how each optimization impacts **achieved occupancy**, a 
 
 ---
 
+
 ## 🔎 What is Achieved Occupancy?
 
 **Achieved Occupancy** tells us how well the GPU is able to schedule and utilize its resources (like threads, warps, shared memory) to hide memory latency.
