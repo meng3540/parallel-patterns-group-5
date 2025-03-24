@@ -2,7 +2,8 @@
 
 This section breaks down the performance of the **basic CUDA convolution** version in **simple terms**.
 
----
+--- 
+
 
 ## ⚙️ Overview
 
