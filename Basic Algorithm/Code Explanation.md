@@ -63,7 +63,3 @@ The Host Code manages:
   - **Result Copy:** Retrieves the computed convolution output from GPU to CPU.
   - **Output Verification:** Prints the top-left 4×4 region of the processed image for validation.
   - **Cleanup:** Frees memory on both host and device.
-
-
-
-- [x]  ***Basic 2D Convolution Algorithm***
