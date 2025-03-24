@@ -1,6 +1,7 @@
 # ⚡ Optimized CUDA Gaussian Blur (Using Constant Memory)
 
-This version improves the basic global memory convolution by storing the filter kernel in memory that is designated as **`__constant__` memory**. This memory is used to hold the filter kernel, which dramatically speeds up access for data that is read-only and very little, much like a Gaussian filter.
+This version improves the basic global memory convolution by storing the filter kernel in memory that is designated as **`__constant__` memory**. This memory is used to hold the filter kernel, which dramatically speeds up access for data that is read-only and very little, much like a Gaussian filter. 
+
 
 ---
 
