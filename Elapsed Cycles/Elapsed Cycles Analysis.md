@@ -2,6 +2,7 @@
 
 This section explains how each CUDA optimization affects **L1 cache activity**, measured by **Total L1 Elapsed Cycles**.
 
+
 ---
 
 ## ❓ What Are L1 Elapsed Cycles?
