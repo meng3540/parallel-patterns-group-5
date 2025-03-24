@@ -1,6 +1,6 @@
 # ⚡ Optimized CUDA Gaussian Blur (Using Constant Memory)
 
-This version improves the basic global memory convolution by storing the filter kernel in **`__constant__` memory**, which is much faster for small, read-only data like a Gaussian filter.
+This version improves the basic global memory convolution by storing the filter kernel in memory that is designated as **`__constant__` memory**. This memory is used to hold the filter kernel, which dramatically speeds up access for data that is read-only and very little, much like a Gaussian filter.
 
 ---
 
@@ -17,9 +17,9 @@ This version improves the basic global memory convolution by storing the filter 
 
 ### ✅ **Constant Memory**
 
-Instead of storing the filter in global memory (like in the basic version), it is now stored in fast **read-only constant memory (`__constant__`)**, which:
-- Is **cached**, allowing for **faster access** when all threads read the same data.
-- Is ideal for **small filters** used in convolution.
+Rather from being kept in global memory like in the basic version, the filter is now retained in rapid **read-only constant memory (`__constant__`)**, which:
+- Is **cached** lets all threads access **faster** when they all read the same data.
+- Perfect for **small filters** applied in convolution.
 
 ```cpp
 __constant__ float F[FILTER_SIZE * FILTER_SIZE];
@@ -42,7 +42,7 @@ Total Effective Bandwidth:   0.016 GB/s
 Total Bytes Transferred:     28.211 MB
 ```
 
-📌 **Note:** The extremely low H2D/D2H bandwidth is due to total execution time including image I/O, which dominates on CPU.
+📌 **Note:** The very small H2D/D2H bandwidth results from entire execution time dominated on CPU including imagine I/O.
 
 ---
 
@@ -51,7 +51,7 @@ Total Bytes Transferred:     28.211 MB
 ### 1. Image Preparation
 
 - Image is loaded with `stb_image.h`
-- Converted to grayscale and normalized to float values between `0.0` and `1.0`
+- turned to grayscale and adjusted to float values ranging from `0.0` to `1.0`
 
 ### 2. CUDA Memory Allocation
 
@@ -64,7 +64,7 @@ cudaMemcpyToSymbol(F, h_filter, filter_bytes);
 
 ### 3. Optimized Kernel
 
-Each thread computes the convolution of a single pixel using the shared kernel:
+Every thread calculates the convolution of one pixel using the shared kernel:
 
 ```cpp
 __global__ void convolution_2D_kernel_opt(...) {
@@ -95,7 +95,7 @@ CUDA events measure:
 | Total Bytes Transferred    | 28.211 MB    |
 | Effective Bandwidth        | 0.016 GB/s   |
 
-Compared to the basic version, **kernel memory bandwidth has improved** due to using constant memory for the filter.
+Using constant memory for the filter has helped **kernel memory bandwidth** to improve over the basic version.
 
 ---
 
@@ -119,8 +119,6 @@ Compared to the basic version, **kernel memory bandwidth has improved** due to u
 
 ## ✅ Summary
 
-This optimized CUDA version uses **constant memory** to speed up access to the Gaussian filter. This results in **better memory bandwidth** and performance compared to using only global memory.
-
-Next step? You could explore **shared memory** or **tiling** to reduce global memory accesses even more 🔥
+This improved CUDA variant accelerates Gaussian filter access by means of **constant memory**. This generates **better memory bandwidth** and performance than depending only on global memory.
 
 ---
