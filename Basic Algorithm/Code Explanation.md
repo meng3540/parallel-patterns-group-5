@@ -1,6 +1,6 @@
 # 🔍 CUDA Gaussian Blur (Global Memory)
 
-This project applies a **Gaussian blur** filter to an image using **CUDA parallel programming** with **global memory**. The main goal is to accelerate image processing using the GPU.
+The purpose of this project is to apply a Gaussian blur filter to a picture using CUDA parallel programming and global memory. The major goal is to speed up the processing of images using the graphics processing unit (GPU).
 
 ---
 
