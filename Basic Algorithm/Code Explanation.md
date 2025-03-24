@@ -16,7 +16,7 @@ The purpose of this project is to apply a Gaussian blur filter to a picture usin
 
 ## 💻 Sample Output
 
-Here’s a real example of the console output after running the program:
+Here’s a real example of the console output after running our Basic program:
 
 ```
 Blurred image saved to C:\Users\N01538486\Desktop\blurred_output.png
@@ -31,7 +31,7 @@ Total Effective Bandwidth:   0.001 GB/s
 Total Bytes Transferred:     1.005 MB
 ```
 
-This gives insight into how efficiently the GPU and memory are being used.
+The efficiency of the GPU and memory utilization may be better understood as a result of this.
 
 ---
 
@@ -39,7 +39,7 @@ This gives insight into how efficiently the GPU and memory are being used.
 
 ### 🧠 1. Image Load
 
-The image is loaded using `stb_image.h` and converted to grayscale using only the first channel:
+We load the picture by using the `stb_image.h` file, and then we convert it to grayscale by utilizing just the first channel:
 
 ```cpp
 unsigned char* image = stbi_load(input_path, &width, &height, &channels, 0);
@@ -70,13 +70,13 @@ float gaussian_filter[9] = {
 };
 ```
 
-This smooths the image by giving more weight to the center pixel and blending nearby pixels.
+By combining surrounding pixels and giving the core pixel a greater significance, this method improves the overall quality of the image.
 
 ---
 
 ### 🔁 4. CUDA Kernel
 
-Each thread computes **one pixel** of the output using the kernel below:
+Every thread is responsible for calculating a **single pixel** of the output by using the kernel that is available below:
 
 ```cpp
 __global__ void convolution_2D_kernel(...) {
@@ -93,7 +93,7 @@ __global__ void convolution_2D_kernel(...) {
 }
 ```
 
-**Boundary Handling:** Threads at the edges skip invalid memory access.
+**Boundary Handling:** The edges of the threads are able to bypass incorrect memory access.
 
 ---
 
@@ -109,7 +109,7 @@ CUDA events are used to measure:
 
 ### 🖼 6. Image Save
 
-The float output is converted to `unsigned char` and saved using:
+Casting the float output to an `unsigned character`  and storing it using the following:
 
 ```cpp
 stbi_write_png(output_path, width, height, 1, output_image, width);
@@ -141,15 +141,5 @@ From the sample output:
 - NVIDIA GPU with CUDA support
 - CUDA Toolkit installed
 - `stb_image.h` and `stb_image_write.h` included
-
----
-
-## ✅ TL;DR
-
-This project demonstrates a CUDA-accelerated Gaussian blur using global memory. It features:
-
-- Efficient thread-level parallelism
-- Clean host-device memory flow
-- Performance measurement tools
 
 ---
