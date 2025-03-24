@@ -4,6 +4,7 @@ This section compares the **step-by-step improvements** across the 3 CUDA convol
 
 ---
 
+
 ## 🧱 1. Global Memory → Constant Memory
 
 **Time:** 1.074 ms → 1.055 ms  
