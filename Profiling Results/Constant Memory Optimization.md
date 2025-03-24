@@ -4,6 +4,7 @@ This section explains how moving the filter to **constant memory** gives a small
 
 ---
 
+
 ## ⚙️ What Changed
 
 ### ✅ Main Idea:
